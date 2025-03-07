@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Monitoring Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Energy Usage Dashboard</h1>
+
+        <div class="dashboard">
+            <!-- Energy Usage Chart -->
+            <canvas id="energyChart"></canvas>
+        </div>
+
+        <div class="budget">
+            <h2>Energy Budget Settings</h2>
+            <label for="budget">Set your energy budget (kWh):</label>
+            <input type="number" id="budget" placeholder="Enter budget" />
+            <button onclick="checkBudget()">Check Budget</button>
+            <p id="budget-status"></p>
+        </div>
+
+        <div class="usage">
+            <h2>Recent Energy Usage</h2>
+            <table id="usage-table">
+                <thead>
+                    <tr>
+                        <th>Appliance</th>
+                        <th>Energy Consumed (kWh)</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
